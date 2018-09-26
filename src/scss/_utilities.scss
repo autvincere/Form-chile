@@ -1,0 +1,36 @@
+// Mixin
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content
+            }
+    &:-moz-placeholder {
+        @content
+            }
+    &::-moz-placeholder {
+        @content
+            }
+    &:-ms-input-placeholder {
+        @content
+            }
+}
+
+@mixin inline-percent($percentage,$align,$vertical) {
+    display: inline-block;
+    width: $percentage;
+    text-align: $align;
+    vertical-align: $vertical;
+}
+
+@mixin mobile {
+    display: block;
+    width: 90%;
+    text-align: center;
+    vertical-align: top;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+@mixin background-img($image){
+    background-image: url($image);
+    background-repeat: repeat-y;
+    background-size: contain;
+}
