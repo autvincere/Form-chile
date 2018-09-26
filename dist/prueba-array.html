@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+let validCampos = [
+  {"id": "nombre", "value": false},
+  {"id": "apellidoP", "value": false},
+  {"id": "apellidoM", "value": false},
+  {"id": "rut", "value": false},
+  {"id": "region", "value": false},
+  {"id": "celular", "value": false},
+  {"id": "email", "value": false},
+  {"id": "emailChk", "value": false},
+  {"id": "acept", "value": false}
+];
+
+//cambiar estado de value a true
+var campoNombre = "nombre";
+let trueValue = validCampos.map(function(dato){
+  if(dato.id == "nombre"){
+    dato.value = true;
+  }
+  return dato;
+});
+console.log(validCampos)
+
+// Contador de cantidad de "true" que se cambiaron
+var count = validCampos.filter(function(s) { 
+	return s.value; }).length;
+
+// Result
+console.log("#True: " + count)
+
+	</script>
+</body>
+</html>
